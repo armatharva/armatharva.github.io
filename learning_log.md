@@ -1,0 +1,15 @@
+## Copilot learning log
+
+These notes summarize the three purposeful Copilot requests that guided this portfolio build. Review the prompts and decisions against your own VS Code Copilot chat before submitting.
+
+| Purpose | Prompt or question | What Copilot suggested | What I accepted, changed, or rejected | How I checked it |
+| --- | --- | --- | --- | --- |
+| Build | “Help me create a beginner-friendly, single-page portfolio with an introduction, About Me, skills, and projects. Use semantic HTML, and don’t invent personal facts.” | Use meaningful page sections, descriptive headings, and project cards that explain purpose, tools, and learning. | I used semantic sections and personalized the content around learning Python, data science, and web development. I kept experience descriptions honest and added a clearly labeled synthetic-data project instead of claiming real personal data. | Checked that all required sections and project details are present, and that each local project link points to a file. |
+| Understand | “Explain how an in-page navigation link such as `href="#projects"` connects to a section in my HTML.” | The fragment after `#` targets the element whose `id` matches it; the browser scrolls to that element without loading another page. | I used matching IDs for the About, Skills, Projects, and Learning goals navigation links, and added a skip-to-content link. | Compared every in-page link fragment with the page’s IDs using an HTML link check. |
+| Improve / troubleshoot | “How can I keep project cards readable on a narrow phone screen without horizontal overflow?” | Use a responsive CSS grid with columns that fit the available space, and switch the navigation to a stacked layout at a small breakpoint. | I used `repeat(auto-fit, minmax(min(100%, 20rem), 1fr))` for project cards and changed the header layout below `38rem`. | Checked all local links and section targets; reviewed the grid minimum and mobile breakpoint in `style.css`. |
+
+## Reflection
+
+GitHub keeps my files and commit history together, so I can track changes and share a project. VS Code gives me one place to edit the HTML, CSS, and Python files and run the analysis. Copilot helps me think through a structure, explain code, and consider improvements; I still need to review and test its suggestions. GitHub Pages can publish the static HTML and CSS so someone can visit the portfolio without running a server.
+
+One challenge was making the project cards adapt to narrow screens without becoming too cramped or causing horizontal scrolling. I used a CSS grid with a flexible minimum column width and a small-screen breakpoint for the navigation, then checked that the page’s links and section targets match. I can now explain `href="#projects"`: it points to the element whose `id` is `projects`, letting the browser jump to that section. Next, I would replace the practice dataset with a carefully checked real dataset and add a clear chart with an explanation of what it can—and cannot—show.
