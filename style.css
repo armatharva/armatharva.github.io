@@ -18,7 +18,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 5rem;
+	scroll-padding-top: 6rem;
 }
 
 body {
@@ -69,6 +69,9 @@ a:focus-visible {
 }
 
 .site-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
 	border-bottom: 1px solid var(--line);
 	background: var(--paper);
 }
@@ -289,6 +292,10 @@ h1 {
 }
 
 @media (max-width: 38rem) {
+	html {
+		scroll-padding-top: 9rem;
+	}
+
 	.container {
 		width: min(100% - 2rem, 68rem);
 	}
